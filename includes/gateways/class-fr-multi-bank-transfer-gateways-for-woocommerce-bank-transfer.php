@@ -14,6 +14,8 @@ abstract class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Activator_Bank_Tr
     public function __construct() {
         $this->id                 = 'bank_transfer';
         $this->method_title       = __( 'Bank Transfer', 'fr-multi-bank-transfer-gateways-for-woocommerce' );
+        
+        $this->_init();
     }
     
     /**
@@ -26,12 +28,14 @@ abstract class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Activator_Bank_Tr
         $this->has_fields         = false;
         $this->method_description = __( 'Allows payments by BACS, more commonly known as direct bank/wire transfer.', 'fr-multi-bank-transfer-gateways-for-woocommerce' );
 
-        // Load the settings.
         $this->init_form_fields();
-        $this->init_settings();
         
-        // Change form field label.
+        // Modify form fields.
         $this->form_fields['enabled']['label'] = __( 'Enable', 'fr-multi-bank-transfer-gateways-for-woocommerce' );
+        $this->form_fields['title']['default'] = $this->method_title;
+        
+        // Load the settings.
+        $this->init_settings();
 
         // Define user set variables
         $this->title            = $this->get_option( 'title' );
