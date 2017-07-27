@@ -100,6 +100,14 @@ class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Admin {
 
 	}
         
+        /**
+         * Register payment gateways.
+         * 
+         * Hooked on `woocommerce_payment_gateways` filter.
+         * 
+         * @param array $gateways
+         * @return array
+         */
         public function add_gateway_classes($gateways) {
             require_once plugin_dir_path(dirname(__FILE__)) . 'includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php';
             require_once plugin_dir_path(dirname(__FILE__)) . 'includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-1.php';

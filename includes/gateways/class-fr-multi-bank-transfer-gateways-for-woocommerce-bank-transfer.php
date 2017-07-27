@@ -34,27 +34,25 @@ abstract class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Activator_Bank_Tr
         $this->form_fields['enabled']['label'] = __( 'Enable', 'fr-multi-bank-transfer-gateways-for-woocommerce' );
 
         // Define user set variables
-        $this->title        = $this->get_option( 'title' );
-        $this->description  = $this->get_option( 'description' );
-        $this->instructions = $this->get_option( 'instructions' );
+        $this->title            = $this->get_option( 'title' );
+        $this->description      = $this->get_option( 'description' );
+        $this->instructions     = $this->get_option( 'instructions' );
 
         // BACS account fields shown on the thanks page and in emails
-        $this->account_details = get_option( 'woocommerce_' . $this->id . '_accounts',
-                array(
-                        array(
-                                'account_name'   => $this->get_option( 'account_name' ),
-                                'account_number' => $this->get_option( 'account_number' ),
-                                'sort_code'      => $this->get_option( 'sort_code' ),
-                                'bank_name'      => $this->get_option( 'bank_name' ),
-                                'iban'           => $this->get_option( 'iban' ),
-                                'bic'            => $this->get_option( 'bic' ),
-                        ),
-                )
-        );
+        $this->account_details  = $this->get_option( 'account_details', array(
+					array(
+                                            'account_name'   => '',
+                                            'account_number' => '',
+                                            'sort_code'      => '',
+                                            'bank_name'      => '',
+                                            'iban'           => '',
+                                            'bic'            => '',
+                                        )
+				) );
 
         // Actions
         add_action( 'woocommerce_update_options_payment_gateways_' . $this->id, array( $this, 'process_admin_options' ) );
-        add_action( 'woocommerce_update_options_payment_gateways_' . $this->id, array( $this, 'save_account_details' ) );
+        add_filter( 'woocommerce_settings_api_sanitized_fields_' . $this->id, array( $this, 'append_account_details_options' ) );
         add_action( 'woocommerce_thankyou_' . $this->id, array( $this, 'thankyou_page' ) );
 
         // Customer Emails
@@ -62,11 +60,13 @@ abstract class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Activator_Bank_Tr
     }
     
     /**
-     * Save account details table.
+     * Append the account details to the settings array just before it saved.
      * 
-     * Copied and modified from WC_Gateway_BACS::email_instructions() version 2.1.0 
+     * Copied and modified from WC_Gateway_BACS::save_account_details() version 2.1.0 
+     * 
+     * Hooked on `'woocommerce_settings_api_sanitized_fields_{$this->id}` filter.
      */
-    public function save_account_details() {
+    public function append_account_details_options($settings) {
             $accounts = array();
 
             if ( isset( $_POST['bacs_account_name'] ) ) {
@@ -94,13 +94,17 @@ abstract class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Activator_Bank_Tr
                     }
             }
 
-            update_option( 'woocommerce_' . $this->id . '_accounts', $accounts );
+            $settings['account_details'] = $accounts;
+            
+            return $settings;
     }
 
     /**
      * Add content to the WC emails.
      *
      * Copied and modified from WC_Gateway_BACS::email_instructions() version 2.1.0 
+     * 
+     * Hooked on `woocommerce_email_before_order_table` action.
      * 
      * @param WC_Order $order
      * @param bool $sent_to_admin
