@@ -99,5 +99,16 @@ class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Admin {
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/fr-multi-bank-transfer-gateways-for-woocommerce-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
+        
+        public function add_gateway_classes($gateways) {
+            require_once plugin_dir_path(dirname(__FILE__)) . 'includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php';
+            require_once plugin_dir_path(dirname(__FILE__)) . 'includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-1.php';
+            require_once plugin_dir_path(dirname(__FILE__)) . 'includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-2.php';
+            
+            $gateways[] = 'Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Activator_Bank_Transfer_1';
+            $gateways[] = 'Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Activator_Bank_Transfer_2';
+            
+            return $gateways;
+        }
 
 }
