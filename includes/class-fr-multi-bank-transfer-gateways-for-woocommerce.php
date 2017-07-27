@@ -154,6 +154,7 @@ class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce {
 //		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 //		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
                 
+                $this->loader->add_filter('woocommerce_get_settings_checkout', $plugin_admin, 'add_custom_checkout_settings');
                 $this->loader->add_filter( 'woocommerce_payment_gateways', $plugin_admin, 'add_gateway_classes' );
 
 	}

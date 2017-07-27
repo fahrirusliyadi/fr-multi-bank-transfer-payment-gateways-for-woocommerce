@@ -101,6 +101,37 @@ class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Admin {
 	}
         
         /**
+         * 
+         * Hooked on `'woocommerce_get_settings_{$this->id}` filter. The dynamic portion
+         * `$this->id` refers to the setting page id, which is `checkout`.
+         * 
+         * @param type $settings
+         */
+        public function add_custom_checkout_settings($settings) {
+            $new_settings = array();
+            
+            foreach ($settings as $value) {
+                $new_settings[] = $value;
+                
+                if (array_key_exists('type', $value) && $value['type'] == 'payment_gateways') {
+                    $new_settings[] = array(
+                        'title'             => __( 'Number of additional bank transfer gateways', 'fr-multi-bank-transfer-gateways-for-woocommerce' ),
+                        'desc'              => __( 'How many bank transfer gateways do you want to add? Maximum 10. Refresh after saving this option.', 'fr-multi-bank-transfer-gateways-for-woocommerce' ),
+                        'id'                => 'fr_multi_bank_transfer_gateways_for_woocommerce_bank_number',
+                        'type'              => 'number',
+                        'desc_tip'          => true,
+                        'custom_attributes' => array(
+                                                'min' => 0,
+                                                'max' => 10,
+                                            )
+                    );
+                }
+            }
+            
+            return $new_settings;
+        }
+        
+        /**
          * Register payment gateways.
          * 
          * Hooked on `woocommerce_payment_gateways` filter.
@@ -109,12 +140,24 @@ class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Admin {
          * @return array
          */
         public function add_gateway_classes($gateways) {
-            require_once plugin_dir_path(dirname(__FILE__)) . 'includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php';
-            require_once plugin_dir_path(dirname(__FILE__)) . 'includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-1.php';
-            require_once plugin_dir_path(dirname(__FILE__)) . 'includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-2.php';
+            $bank_number = get_option('fr_multi_bank_transfer_gateways_for_woocommerce_bank_number', 0);
             
-            $gateways[] = 'Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Activator_Bank_Transfer_1';
-            $gateways[] = 'Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Activator_Bank_Transfer_2';
+            if ($bank_number < 1) {
+                return $gateways;
+            }
+            
+            if ($bank_number > 10) {
+                $bank_number = 10;
+            }
+            
+            // Load the abstract class.
+            require_once plugin_dir_path(dirname(__FILE__)) . 'includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php';
+            
+            for ($i = 1; $i <= $bank_number; $i++) {
+                require_once plugin_dir_path(dirname(__FILE__)) . 'includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-' . $i . '.php';
+                
+                $gateways[] = 'Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Activator_Bank_Transfer_' . $i;
+            }
             
             return $gateways;
         }
