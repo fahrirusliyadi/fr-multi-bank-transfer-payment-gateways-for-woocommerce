@@ -31,8 +31,18 @@ abstract class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Activator_Bank_Tr
         $this->init_form_fields();
         
         // Modify form fields.
-        $this->form_fields['enabled']['label'] = __( 'Enable', 'fr-multi-bank-transfer-gateways-for-woocommerce' );
-        $this->form_fields['title']['default'] = $this->method_title;
+        $this->form_fields['enabled']['label']              = __( 'Enable', 'fr-multi-bank-transfer-gateways-for-woocommerce' );
+        $this->form_fields['title']['default']              = $this->method_title;
+        $this->form_fields['account_details']['default']    = array(
+                                                                array(
+                                                                    'account_name'   => '',
+                                                                    'account_number' => '',
+                                                                    'sort_code'      => '',
+                                                                    'bank_name'      => '',
+                                                                    'iban'           => '',
+                                                                    'bic'            => '',
+                                                                )
+                                                            );
         
         // Load the settings.
         $this->init_settings();
@@ -43,16 +53,7 @@ abstract class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Activator_Bank_Tr
         $this->instructions     = $this->get_option( 'instructions' );
 
         // BACS account fields shown on the thanks page and in emails
-        $this->account_details  = $this->get_option( 'account_details', array(
-					array(
-                                            'account_name'   => '',
-                                            'account_number' => '',
-                                            'sort_code'      => '',
-                                            'bank_name'      => '',
-                                            'iban'           => '',
-                                            'bic'            => '',
-                                        )
-				) );
+        $this->account_details  = $this->get_option( 'account_details' );
 
         // Actions
         add_action( 'woocommerce_update_options_payment_gateways_' . $this->id, array( $this, 'process_admin_options' ) );
