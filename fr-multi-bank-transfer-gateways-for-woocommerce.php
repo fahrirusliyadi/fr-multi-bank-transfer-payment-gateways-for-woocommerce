@@ -13,12 +13,12 @@
  * @package           Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce
  *
  * @wordpress-plugin
- * Plugin Name:       Fr Multi Bank Transfer Gateways for WooCommerce
- * Plugin URI:        https://example.com
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Plugin Name:       Fr Multi Bank Transfer Payment Gateways for WooCommerce
+ * Plugin URI:		  https://wordpress.org/plugins/fr-multi-bank-transfer-payment-gateways-for-woocommerce/
+ * Description:       Add multiple bank transfer payment gateways.
  * Version:           1.0.0
  * Author:            Fahri Rusliyadi
- * Author URI:        https://example.com
+ * Author URI:        https://profiles.wordpress.org/fahrirusliyadi
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       fr-multi-bank-transfer-gateways-for-woocommerce
