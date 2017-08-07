@@ -156,7 +156,7 @@ class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Admin {
             for ($i = 1; $i <= $bank_number; $i++) {
                 require_once plugin_dir_path(dirname(__FILE__)) . 'includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-' . $i . '.php';
                 
-                $gateways[] = 'Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Activator_Bank_Transfer_' . $i;
+                $gateways[] = 'Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Bank_Transfer_' . $i;
             }
             
             return $gateways;

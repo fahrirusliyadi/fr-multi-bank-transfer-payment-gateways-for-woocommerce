@@ -7,7 +7,7 @@
  *
  * @author Fahri Rusliyadi <fahri.rusliyadi@gmail.com>
  */
-abstract class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Activator_Bank_Transfer extends WC_Gateway_BACS {
+abstract class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Bank_Transfer extends WC_Gateway_BACS {
     /**
      * Constructor for the gateway.
      */
