@@ -1,0 +1,83 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2017-08-07 15:13+0000\n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: admin/class-fr-multi-bank-transfer-gateways-for-woocommerce-admin.php:118
+msgid "Number of additional bank transfer gateways"
+msgstr ""
+
+#: admin/class-fr-multi-bank-transfer-gateways-for-woocommerce-admin.php:119
+msgid ""
+"How many bank transfer gateways do you want to add? Maximum 10. Refresh "
+"after saving this option."
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-1.php:16
+msgid "Bank Transfer 1"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-10.php:16
+msgid "Bank Transfer 10"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-2.php:16
+msgid "Bank Transfer 2"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-3.php:16
+msgid "Bank Transfer 3"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-4.php:16
+msgid "Bank Transfer 4"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-5.php:16
+msgid "Bank Transfer 5"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-6.php:16
+msgid "Bank Transfer 6"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-7.php:16
+msgid "Bank Transfer 7"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-8.php:16
+msgid "Bank Transfer 8"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-9.php:16
+msgid "Bank Transfer 9"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:16
+msgid "Bank Transfer"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:29
+msgid ""
+"Allows payments by BACS, more commonly known as direct bank/wire transfer."
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:34
+msgid "Enable"
+msgstr ""
+
+#. Name of the plugin
+msgid "Fr Multi Bank Transfer Payment Gateways for WooCommerce"
+msgstr ""
+
+#. Description of the plugin
+msgid "Add multiple bank transfer payment gateways."
+msgstr ""
+
+#. Author of the plugin
+msgid "Fahri Rusliyadi"
+msgstr ""
