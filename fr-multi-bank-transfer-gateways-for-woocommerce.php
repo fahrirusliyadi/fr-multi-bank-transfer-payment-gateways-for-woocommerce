@@ -31,27 +31,6 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 /**
- * The code that runs during plugin activation.
- * This action is documented in includes/class-fr-multi-bank-transfer-gateways-for-woocommerce-activator.php
- */
-function activate_fr_multi_bank_transfer_gateways_for_woocommerce() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-fr-multi-bank-transfer-gateways-for-woocommerce-activator.php';
-	Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Activator::activate();
-}
-
-/**
- * The code that runs during plugin deactivation.
- * This action is documented in includes/class-fr-multi-bank-transfer-gateways-for-woocommerce-deactivator.php
- */
-function deactivate_fr_multi_bank_transfer_gateways_for_woocommerce() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-fr-multi-bank-transfer-gateways-for-woocommerce-deactivator.php';
-	Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Deactivator::deactivate();
-}
-
-register_activation_hook( __FILE__, 'activate_fr_multi_bank_transfer_gateways_for_woocommerce' );
-register_deactivation_hook( __FILE__, 'deactivate_fr_multi_bank_transfer_gateways_for_woocommerce' );
-
-/**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
