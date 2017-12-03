@@ -1,17 +1,17 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2017-08-07 15:13+0000\n"
+"POT-Creation-Date: 2017-12-03 01:09+0000\n"
 "Language: \n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: admin/class-fr-multi-bank-transfer-gateways-for-woocommerce-admin.php:118
+#: admin/class-fr-multi-bank-transfer-gateways-for-woocommerce-admin.php:72
 msgid "Number of additional bank transfer gateways"
 msgstr ""
 
-#: admin/class-fr-multi-bank-transfer-gateways-for-woocommerce-admin.php:119
+#: admin/class-fr-multi-bank-transfer-gateways-for-woocommerce-admin.php:73
 msgid ""
 "How many bank transfer gateways do you want to add? Maximum 10. Refresh "
 "after saving this option."
@@ -78,6 +78,16 @@ msgstr ""
 msgid "Add multiple bank transfer payment gateways."
 msgstr ""
 
+#. URI of the plugin
+msgid ""
+"https://wordpress.org/plugins/fr-multi-bank-transfer-payment-gateways-for-"
+"woocommerce/"
+msgstr ""
+
 #. Author of the plugin
 msgid "Fahri Rusliyadi"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://profiles.wordpress.org/fahrirusliyadi"
 msgstr ""
