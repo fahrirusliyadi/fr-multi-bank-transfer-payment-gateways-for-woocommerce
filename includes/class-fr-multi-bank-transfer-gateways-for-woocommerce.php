@@ -68,8 +68,8 @@ class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce {
 	 */
 	public function __construct() {
 
-		$this->plugin_name = 'fr-multi-bank-transfer-gateways-for-woocommerce';
-		$this->version = '1.0.0';
+		$this->plugin_name  = 'fr-multi-bank-transfer-gateways-for-woocommerce';
+		$this->version      = FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_VERSION;
 
 		$this->load_dependencies();
 		$this->set_locale();
