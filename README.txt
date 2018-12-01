@@ -21,7 +21,7 @@ Notes:
 
 1. Upload `fr-multi-bank-transfer-payment-gateways-for-woocommerce` folder to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Go to 'WooCommerce' &rarr; 'Settings' &rarr; 'Checkout' &rarr; and enter the 'number of additional bank transfer gateways'.
+1. Go to *WooCommerce* &rarr; *Settings* &rarr; *Payments* &rarr; and enter the *number of additional bank transfer gateways*.
 Refresh the page after saving this option. The additional bank transfer payment gateways will be added after the page has been refreshed.
 
 == Screenshots ==
