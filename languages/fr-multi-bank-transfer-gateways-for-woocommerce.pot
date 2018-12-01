@@ -1,87 +1,29 @@
-#, fuzzy
+# Copyright (C) 2018 Fahri Rusliyadi
+# This file is distributed under the same license as the Fr Multi Bank Transfer Payment Gateways for WooCommerce plugin.
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2017-12-03 01:09+0000\n"
-"Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: Loco - https://localise.biz/"
+"Project-Id-Version: Fr Multi Bank Transfer Payment Gateways for WooCommerce 1.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/fr-multi-bank-transfer-payment-gateways-for-woocommerce\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2018-12-01T15:40:06+00:00\n"
+"PO-Revision-Date: 2018-12-01T15:40:06+00:00\n"
+"X-Generator: WP-CLI 2.0.1\n"
+"X-Domain: fr-multi-bank-transfer-gateways-for-woocommerce\n"
 
-#: admin/class-fr-multi-bank-transfer-gateways-for-woocommerce-admin.php:72
-msgid "Number of additional bank transfer gateways"
-msgstr ""
-
-#: admin/class-fr-multi-bank-transfer-gateways-for-woocommerce-admin.php:73
-msgid ""
-"How many bank transfer gateways do you want to add? Maximum 10. Refresh "
-"after saving this option."
-msgstr ""
-
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-1.php:16
-msgid "Bank Transfer 1"
-msgstr ""
-
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-10.php:16
-msgid "Bank Transfer 10"
-msgstr ""
-
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-2.php:16
-msgid "Bank Transfer 2"
-msgstr ""
-
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-3.php:16
-msgid "Bank Transfer 3"
-msgstr ""
-
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-4.php:16
-msgid "Bank Transfer 4"
-msgstr ""
-
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-5.php:16
-msgid "Bank Transfer 5"
-msgstr ""
-
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-6.php:16
-msgid "Bank Transfer 6"
-msgstr ""
-
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-7.php:16
-msgid "Bank Transfer 7"
-msgstr ""
-
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-8.php:16
-msgid "Bank Transfer 8"
-msgstr ""
-
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-9.php:16
-msgid "Bank Transfer 9"
-msgstr ""
-
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:16
-msgid "Bank Transfer"
-msgstr ""
-
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:29
-msgid ""
-"Allows payments by BACS, more commonly known as direct bank/wire transfer."
-msgstr ""
-
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:34
-msgid "Enable"
-msgstr ""
-
-#. Name of the plugin
+#. Plugin Name of the plugin
 msgid "Fr Multi Bank Transfer Payment Gateways for WooCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/fr-multi-bank-transfer-payment-gateways-for-woocommerce/"
 msgstr ""
 
 #. Description of the plugin
 msgid "Add multiple bank transfer payment gateways."
-msgstr ""
-
-#. URI of the plugin
-msgid ""
-"https://wordpress.org/plugins/fr-multi-bank-transfer-payment-gateways-for-"
-"woocommerce/"
 msgstr ""
 
 #. Author of the plugin
@@ -90,4 +32,68 @@ msgstr ""
 
 #. Author URI of the plugin
 msgid "https://profiles.wordpress.org/fahrirusliyadi"
+msgstr ""
+
+#: admin/class-fr-multi-bank-transfer-gateways-for-woocommerce-admin.php:70
+msgid "Settings"
+msgstr ""
+
+#: admin/class-fr-multi-bank-transfer-gateways-for-woocommerce-admin.php:93
+msgid "Number of additional bank transfer gateways"
+msgstr ""
+
+#: admin/class-fr-multi-bank-transfer-gateways-for-woocommerce-admin.php:94
+msgid "How many bank transfer gateways do you want to add? Maximum 10. Refresh after saving this option."
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-1.php:19
+msgid "Bank Transfer 1"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-10.php:19
+msgid "Bank Transfer 10"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-2.php:19
+msgid "Bank Transfer 2"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-3.php:19
+msgid "Bank Transfer 3"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-4.php:19
+msgid "Bank Transfer 4"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-5.php:19
+msgid "Bank Transfer 5"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-6.php:19
+msgid "Bank Transfer 6"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-7.php:19
+msgid "Bank Transfer 7"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-8.php:19
+msgid "Bank Transfer 8"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-9.php:19
+msgid "Bank Transfer 9"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:30
+msgid "Direct bank transfer"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:31
+msgid "Take payments in person via BACS. More commonly known as direct bank/wire transfer"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:66
+msgid "Enable"
 msgstr ""
