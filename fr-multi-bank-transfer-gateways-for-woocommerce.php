@@ -27,9 +27,7 @@
  */
 
 // If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
-}
+defined('WPINC') || die;
 
 /**
  * Currently plugin version.
@@ -37,6 +35,11 @@ if ( ! defined( 'WPINC' ) ) {
  * Rename this for your plugin and update it as you release new versions.
  */
 define('FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_VERSION', '1.0.1');
+
+/**
+ * The full path and filename of the this file.
+ */
+define('FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_FILE', __FILE__);
 
 /**
  * The core plugin class that is used to define internationalization,
