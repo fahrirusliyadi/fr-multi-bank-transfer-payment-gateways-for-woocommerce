@@ -4,7 +4,7 @@ Donate link: https://paypal.me/FahriRusliyadi
 Tags: multi, multiple, woocommerce, bank-transfer, bacs, payment-gateway, payment-method
 Requires at least: 4.4
 Tested up to: 4.9.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,8 +31,11 @@ Refresh the page after saving this option. The additional bank transfer payment 
 
 == Changelog ==
 
+= 1.0.2 =
+* Update installation instructions.
+* Add "settings" action link in the plugins list table.
+
 = 1.0.1 =
 * Clean up.
 
 = 1.0.0 =
-* First release.

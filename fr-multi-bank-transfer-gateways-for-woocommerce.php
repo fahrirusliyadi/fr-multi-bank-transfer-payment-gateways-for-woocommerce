@@ -8,22 +8,22 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              https://example.com
- * @since             1.0.0
- * @package           Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce
+ * @link            https://example.com
+ * @since           1.0.0
+ * @package         Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce
  *
  * @wordpress-plugin
- * Plugin Name:       Fr Multi Bank Transfer Payment Gateways for WooCommerce
- * Plugin URI:		  https://wordpress.org/plugins/fr-multi-bank-transfer-payment-gateways-for-woocommerce/
- * Description:       Add multiple bank transfer payment gateways.
- * Version:           1.0.1
- * Author:            Fahri Rusliyadi
- * Author URI:        https://profiles.wordpress.org/fahrirusliyadi
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       fr-multi-bank-transfer-gateways-for-woocommerce
- * Domain Path:       /languages
- * WC tested up to:   3.5.2
+ * Plugin Name:     Fr Multi Bank Transfer Payment Gateways for WooCommerce
+ * Plugin URI:      https://wordpress.org/plugins/fr-multi-bank-transfer-payment-gateways-for-woocommerce/
+ * Description:     Add multiple bank transfer payment gateways.
+ * Version:         1.0.2
+ * Author:          Fahri Rusliyadi
+ * Author URI:      https://profiles.wordpress.org/fahrirusliyadi
+ * License:         GPL-2.0+
+ * License URI:     http://www.gnu.org/licenses/gpl-2.0.txt
+ * Text Domain:     fr-multi-bank-transfer-gateways-for-woocommerce
+ * Domain Path:     /languages
+ * WC tested up to: 3.5.2
  */
 
 // If this file is called directly, abort.
@@ -34,7 +34,7 @@ defined('WPINC') || die;
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define('FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_VERSION', '1.0.1');
+define('FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_VERSION', '1.0.2');
 
 /**
  * The full path and filename of the this file.
@@ -57,9 +57,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-fr-multi-bank-transfer-gat
  * @since    1.0.0
  */
 function run_fr_multi_bank_transfer_gateways_for_woocommerce() {
-
-	$plugin = new Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce();
-	$plugin->run();
-
+    $plugin = new Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce();
+    $plugin->run();
 }
 run_fr_multi_bank_transfer_gateways_for_woocommerce();
