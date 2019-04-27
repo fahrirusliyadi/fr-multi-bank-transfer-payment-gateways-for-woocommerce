@@ -1,14 +1,14 @@
 <?php
 
 /**
- * Bank Transfer Payment Gateway abstract.
+ * Bank Transfer Payment Gateway.
  *
  * Provides a Bank Transfer Payment Gateway. 
  *
  * @since 1.0.0
  * @author Fahri Rusliyadi <fahri.rusliyadi@gmail.com>
  */
-abstract class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Bank_Transfer extends WC_Gateway_BACS {
+class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Bank_Transfer extends WC_Gateway_BACS {
     /**
      * {@inheritdoc}
      * 
@@ -23,7 +23,11 @@ abstract class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Bank_Transfer ext
      * 
      * @since 1.0.0
      */
-    public function __construct() {
+    public function __construct($args = array()) {
+        foreach($args as $property => $value) {
+            $this->$property = $value;
+        }
+
         $this->id                   = $this->id ? $this->id : 'bank_transfer';
         $this->icon                 = apply_filters("woocommerce_{$this->id}_icon", '');        
         $this->has_fields           = false;

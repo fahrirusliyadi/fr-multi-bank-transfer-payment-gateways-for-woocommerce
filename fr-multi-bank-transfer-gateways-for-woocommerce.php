@@ -33,19 +33,30 @@ defined('WPINC') || die;
  * Currently plugin version.
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
+ * 
+ * @since 1.0.1
  */
 define('FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_VERSION', '1.0.2');
 
 /**
- * The full path and filename of the this file.
+ * The full path and filename of this file.
+ * 
+ * @since 1.0.2
  */
 define('FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_FILE', __FILE__);
+
+/**
+ * The directory of this file.
+ * 
+ * @since 1.1.0
+ */
+define( 'FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_DIR', plugin_dir_path( __FILE__ ) );
 
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-fr-multi-bank-transfer-gateways-for-woocommerce.php';
+require FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_DIR . 'includes/class-fr-multi-bank-transfer-gateways-for-woocommerce.php';
 
 /**
  * Begins execution of the plugin.

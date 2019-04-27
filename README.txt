@@ -12,7 +12,7 @@ Add multiple bank transfer payment gateways.
 
 == Description ==
 
-By default, WooCommerce provides 1 bank transfer payment gateway for all your bank accounts. With this plugin, you can add up to 10 additional bank transfer payment gateways. So you can separate your bank accounts into multiple payment gateways, for example 1 payment gateway for 1 bank company.
+By default, WooCommerce provides 1 bank transfer payment gateway for all your bank accounts. With this plugin, you can add additional bank transfer payment gateways. So you can separate your bank accounts into multiple payment gateways, for example 1 payment gateway for 1 bank company.
 
 Notes:
 - On the screenshot you can see there are icons next to the payment gateway's name. You can add the icon using [Fr Custom Payment Gateway Icon for WooCommerce](https://wordpress.org/plugins/fr-custom-payment-gateway-icon-for-woocommerce/) plugin.
