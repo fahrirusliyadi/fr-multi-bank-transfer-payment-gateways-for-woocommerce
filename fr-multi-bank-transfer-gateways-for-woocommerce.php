@@ -13,14 +13,14 @@
  * Plugin Name:     Fr Multi Bank Transfer Payment Gateways for WooCommerce
  * Plugin URI:      https://wordpress.org/plugins/fr-multi-bank-transfer-payment-gateways-for-woocommerce/
  * Description:     Add multiple bank transfer payment gateways.
- * Version:         1.0.2
+ * Version:         1.1.0
  * Author:          Fahri Rusliyadi
  * Author URI:      https://profiles.wordpress.org/fahrirusliyadi
  * License:         GPL-2.0+
  * License URI:     http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:     fr-multi-bank-transfer-gateways-for-woocommerce
  * Domain Path:     /languages
- * WC tested up to: 3.5.2
+ * WC tested up to: 3.6.2
  */
 
 // If this file is called directly, abort.
@@ -33,7 +33,7 @@ defined( 'ABSPATH' ) || die;
  *
  * @since 1.0.1
  */
-define( 'FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_VERSION', '1.0.2' );
+define( 'FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_VERSION', '1.1.0' );
 
 /**
  * The full path and filename of this file.
