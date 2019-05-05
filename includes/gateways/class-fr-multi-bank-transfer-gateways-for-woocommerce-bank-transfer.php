@@ -34,7 +34,7 @@ class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Bank_Transfer extends WC_G
 	/**
 	 * {@inheritdoc}
 	 *
-	 * Copied and modified from {@see WC_Gateway_BACS::__construct()} version 3.5.2.
+	 * Copied and modified from {@see WC_Gateway_BACS::__construct()} version 3.6.2.
 	 * Modifications:
 	 *  - Change <code>id</code> property.
 	 *  - Change <code>icon</code> property.
@@ -113,7 +113,7 @@ class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Bank_Transfer extends WC_G
 	 *
 	 * Make sure the data is escaped correctly, etc.
 	 *
-	 * Copied and modified from {@see WC_Gateway_BACS::save_account_details()} version 3.5.2.
+	 * Copied and modified from {@see WC_Gateway_BACS::save_account_details()} version 3.6.2.
 	 * Modifications:
 	 *  - Return the <code>account_details</code> field value instead of saving it as
 	 *  <code>woocommerce_bacs_accounts</code> option.
@@ -136,7 +136,8 @@ class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Bank_Transfer extends WC_G
 	 * @return array
 	 */
 	public function validate_account_details_field( $key, $value ) {
-		$input    = filter_var_array( $_POST ); // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Nonce verification already handled in WC_Admin_Settings::save()
+		// phpcs:ignore WordPress.Security.NonceVerification.Missing -- Nonce verification already handled in WC_Admin_Settings::save()
+		$input    = filter_var_array( $_POST );
 		$accounts = array();
 
 		if ( isset( $input['bacs_account_name'] ) && isset( $input['bacs_account_number'] ) && isset( $input['bacs_bank_name'] )
@@ -166,7 +167,7 @@ class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Bank_Transfer extends WC_G
 	/**
 	 * {@inheritdoc}
 	 *
-	 * Copied and modified from {@see WC_Gateway_BACS::email_instructions()} version 3.5.2.
+	 * Copied and modified from {@see WC_Gateway_BACS::email_instructions()} version 3.6.2.
 	 * Modifications:
 	 *  - replace <code>'bacs'</code> with <code>$this->id</code> to allow our
 	 *  payment method pass the check.
@@ -188,7 +189,7 @@ class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Bank_Transfer extends WC_G
 	/**
 	 * Get bank details and place into a list format.
 	 *
-	 * Exact copied from {@see WC_Gateway_BACS::bank_details()} version 3.5.2 because
+	 * Exact copied from {@see WC_Gateway_BACS::bank_details()} version 3.6.2 because
 	 * it is a private method so we cannot call it from {@see static::email_instructions()}.
 	 *
 	 * @param int $order_id Order ID.
