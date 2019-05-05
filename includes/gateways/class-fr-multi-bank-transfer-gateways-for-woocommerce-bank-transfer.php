@@ -16,6 +16,22 @@
  */
 class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Bank_Transfer extends WC_Gateway_BACS {
 	/**
+	 * Instructions that will be added to the thank you page and emails.
+	 *
+	 * @since 1.0.0
+	 * @var string
+	 */
+	public $instructions;
+
+	/**
+	 * Account details.
+	 *
+	 * @since 1.0.0
+	 * @var array
+	 */
+	public $account_details;
+
+	/**
 	 * {@inheritdoc}
 	 *
 	 * Copied and modified from {@see WC_Gateway_BACS::__construct()} version 3.5.2.
@@ -116,8 +132,8 @@ class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Bank_Transfer extends WC_G
 	 *
 	 * @since 1.0.2
 	 * @param  string $key Field key.
-	 * @param  string $value Posted Value.
-	 * @return string
+	 * @param  mixed  $value Posted Value.
+	 * @return array
 	 */
 	public function validate_account_details_field( $key, $value ) {
 		$input    = filter_var_array( $_POST ); // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Nonce verification already handled in WC_Admin_Settings::save()

@@ -24,7 +24,7 @@ class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Loader_Factory implements 
 	public function create( Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Container $container ) {
 		$config = $container->get( 'config' );
 		$hooks  = isset( $config['hooks'] ) ? $config['hooks'] : array();
-		$loader = new Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Loader( $hooks );
+		$loader = new Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Loader();
 
 		foreach ( $hooks as $hook ) {
 			$type    = array_shift( $hook );

@@ -1,6 +1,12 @@
 # Fr Multi Bank Transfer Payment Gateways for WooCommerce #
 
-[![Build Status](https://travis-ci.org/fahrirusliyadi/fr-multi-bank-transfer-payment-gateways-for-woocommerce.svg?branch=master)](https://travis-ci.org/fahrirusliyadi/fr-multi-bank-transfer-payment-gateways-for-woocommerce)
+[![Build Status](https://travis-ci.org/fahrirusliyadi/fr-multi-bank-transfer-payment-gateways-for-woocommerce.svg?branch=master)](https://travis-ci.org/fahrirusliyadi/fr-multi-bank-transfer-payment-gateways-for-woocommerce "Build Status")
+[![Code Coverage](https://scrutinizer-ci.com/g/fahrirusliyadi/fr-multi-bank-transfer-payment-gateways-for-woocommerce/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/fahrirusliyadi/fr-multi-bank-transfer-payment-gateways-for-woocommerce/?branch=master "Code Coverage")
+[![Code Quality](https://scrutinizer-ci.com/g/fahrirusliyadi/fr-multi-bank-transfer-payment-gateways-for-woocommerce/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/fahrirusliyadi/fr-multi-bank-transfer-payment-gateways-for-woocommerce/?branch=master "Code Quality")
+[![Active Installs](https://img.shields.io/wordpress/plugin/installs/fr-multi-bank-transfer-payment-gateways-for-woocommerce.svg)](http://wordpress.org/plugins/fr-multi-bank-transfer-payment-gateways-for-woocommerce/ "Active Installs")
+[![Rating](https://img.shields.io/wordpress/plugin/stars/fr-multi-bank-transfer-payment-gateways-for-woocommerce.svg)](http://wordpress.org/plugins/fr-multi-bank-transfer-payment-gateways-for-woocommerce/ "Rating")
+[![Required WordPress Version](https://img.shields.io/wordpress/plugin/wp-version/fr-multi-bank-transfer-payment-gateways-for-woocommerce.svg)](http://wordpress.org/plugins/fr-multi-bank-transfer-payment-gateways-for-woocommerce/ "Required WordPress Version")
+[![Tested WordPress Version](https://img.shields.io/wordpress/plugin/tested/fr-multi-bank-transfer-payment-gateways-for-woocommerce.svg)](http://wordpress.org/plugins/fr-multi-bank-transfer-payment-gateways-for-woocommerce/ "Tested WordPress Version")
 
 By default, WooCommerce provides 1 bank transfer payment gateway for all your bank accounts. With this plugin, you can add additional bank transfer payment gateways. So you can separate your bank accounts into multiple payment gateways, for example 1 payment gateway for 1 bank company.
 

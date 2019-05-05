@@ -1,0 +1,29 @@
+build:
+  nodes:
+    analysis:
+      project_setup:
+        before:
+          # Install analysis dependencies.
+          # https://scrutinizer-ci.com/docs/tools/php/php-scrutinizer/analyzing-wordpress
+          - composer require --dev johnpbloch/wordpress
+          - composer require --dev woocommerce/woocommerce
+      tests:
+        override:
+          - php-scrutinizer-run
+          - phpcs-run --standard=.phpcs.xml.dist
+    coverage:
+      services:
+        mariadb: latest
+      tests:
+        before:
+          - bash bin/install-wp-tests.sh wordpress_test root '' 127.0.0.1 latest
+        override:
+          - 
+            command: vendor/bin/phpunit --coverage-clover coverage-report/coverage.xml
+            coverage:
+              file: coverage-report/coverage.xml
+              format: clover
+filter:
+  excluded_paths:
+    - 'tests/*'
+    - 'bin/*'
