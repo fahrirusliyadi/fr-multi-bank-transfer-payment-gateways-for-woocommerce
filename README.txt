@@ -2,8 +2,8 @@
 Contributors: fahrirusliyadi
 Donate link: https://paypal.me/FahriRusliyadi
 Tags: multi, multiple, woocommerce, bank-transfer, bacs, payment-gateway, payment-method
-Requires at least: 4.4
-Tested up to: 4.9.1
+Requires at least: 4.9
+Tested up to: 5.1.1
 Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -20,9 +20,14 @@ Notes:
 == Installation ==
 
 1. Upload `fr-multi-bank-transfer-payment-gateways-for-woocommerce` folder to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Go to *WooCommerce* &rarr; *Settings* &rarr; *Payments* &rarr; and enter the *number of additional bank transfer gateways*.
-Refresh the page after saving this option. The additional bank transfer payment gateways will be added after the page has been refreshed.
+1. Activate the plugin through the *Plugins* menu in WordPress
+1. Go to *WooCommerce* &rarr; *Settings* &rarr; *Payments* &rarr; and enter the *number of additional bank transfer gateways*. The additional bank transfer payment gateways will be added after you save the settings.
+
+== Frequently Asked Questions ==
+
+= Uninstallation Instructions =
+
+1. Deactivate and delete the plugin through the *Plugins* menu in WordPress
 
 == Screenshots ==
 
