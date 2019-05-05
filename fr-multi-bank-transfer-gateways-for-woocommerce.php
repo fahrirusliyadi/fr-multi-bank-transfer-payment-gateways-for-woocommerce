@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The plugin bootstrap file
  *
@@ -8,8 +7,6 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link            https://example.com
- * @since           1.0.0
  * @package         Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce
  *
  * @wordpress-plugin
@@ -27,48 +24,49 @@
  */
 
 // If this file is called directly, abort.
-defined('WPINC') || die;
+defined( 'ABSPATH' ) || die;
 
 /**
  * Currently plugin version.
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
- * 
+ *
  * @since 1.0.1
  */
-define('FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_VERSION', '1.0.2');
+define( 'FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_VERSION', '1.0.2' );
 
 /**
  * The full path and filename of this file.
- * 
+ *
  * @since 1.0.2
  */
-define('FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_FILE', __FILE__);
+define( 'FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_FILE', __FILE__ );
 
 /**
  * The directory of this file.
- * 
+ *
  * @since 1.1.0
  */
 define( 'FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_DIR', plugin_dir_path( __FILE__ ) );
 
-/**
- * The core plugin class that is used to define internationalization,
- * admin-specific hooks, and public-facing site hooks.
- */
+require FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_DIR . 'includes/class-fr-multi-bank-transfer-gateways-for-woocommerce-container-entry-factory-interface.php';
+require FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_DIR . 'includes/class-fr-multi-bank-transfer-gateways-for-woocommerce-container.php';
+require FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_DIR . 'includes/class-fr-multi-bank-transfer-gateways-for-woocommerce-factory.php';
 require FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_DIR . 'includes/class-fr-multi-bank-transfer-gateways-for-woocommerce.php';
+require FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_DIR . 'includes/class-fr-multi-bank-transfer-gateways-for-woocommerce-i18n.php';
+require FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_DIR . 'includes/class-fr-multi-bank-transfer-gateways-for-woocommerce-loader-factory.php';
+require FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_DIR . 'includes/class-fr-multi-bank-transfer-gateways-for-woocommerce-loader.php';
+require FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_DIR . 'admin/class-fr-multi-bank-transfer-gateways-for-woocommerce-admin.php';
 
 /**
  * Begins execution of the plugin.
  *
- * Since everything within the plugin is registered via hooks,
- * then kicking off the plugin from this point in the file does
- * not affect the page life cycle.
- *
- * @since    1.0.0
+ * @since 1.0.0
+ * @author Fahri Rusliyadi <fahri.rusliyadi@gmail.com>
  */
-function run_fr_multi_bank_transfer_gateways_for_woocommerce() {
-    $plugin = new Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce();
-    $plugin->run();
+function fr_multi_bank_transfer_gateways_for_woocommerce_run() {
+	$plugin = require FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_DIR . 'bootstrap/plugin.php';
+	$plugin->run();
 }
-run_fr_multi_bank_transfer_gateways_for_woocommerce();
+// Priority 5, in case we also have services that need to hook on plugins_loaded action.
+add_action( 'plugins_loaded', 'fr_multi_bank_transfer_gateways_for_woocommerce_run', 5 );

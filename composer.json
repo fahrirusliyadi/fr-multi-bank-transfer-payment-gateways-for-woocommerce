@@ -1,0 +1,22 @@
+{
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "*",
+        "mockery/mockery": "^1.2",
+        "phpcompatibility/phpcompatibility-wp": "*",
+        "phpunit/phpunit": "^5.7",
+        "wp-cli/dist-archive-command": "*",
+        "wp-cli/wp-cli-bundle": "*",
+        "wp-coding-standards/wpcs": "*"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "archive:dist": "wp dist-archive .",
+        "build:pot": "wp i18n make-pot . languages/fr-multi-bank-transfer-gateways-for-woocommerce.pot",
+        "cs:check": "phpcs",
+        "cs:fix": "phpcbf",
+        "test": "phpunit --colors=always",
+        "test:coverage": "phpunit --colors=always --coverage-html coverage-report"
+    }
+}
