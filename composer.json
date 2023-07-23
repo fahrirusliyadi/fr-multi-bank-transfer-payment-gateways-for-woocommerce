@@ -9,7 +9,10 @@
         "wp-coding-standards/wpcs": "*"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     },
     "scripts": {
         "archive:dist": "wp dist-archive .",

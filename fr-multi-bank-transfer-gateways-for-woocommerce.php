@@ -49,6 +49,7 @@ define( 'FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_FILE', __FILE__ );
  */
 define( 'FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_DIR', plugin_dir_path( __FILE__ ) );
 
+require FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_DIR . 'includes/class-fr-multi-bank-transfer-gateways-for-woocommerce-compat.php';
 require FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_DIR . 'includes/class-fr-multi-bank-transfer-gateways-for-woocommerce-container-entry-factory-interface.php';
 require FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_DIR . 'includes/class-fr-multi-bank-transfer-gateways-for-woocommerce-container.php';
 require FR_MULTI_BANK_TRANSFER_GATEWAYS_FOR_WOOCOMMERCE_DIR . 'includes/class-fr-multi-bank-transfer-gateways-for-woocommerce-factory.php';
