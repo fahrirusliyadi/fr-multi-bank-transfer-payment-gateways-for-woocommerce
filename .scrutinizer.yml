@@ -1,8 +1,13 @@
 build:
   nodes:
     analysis:
+      environment:
+        php:
+          version: 7.4
       project_setup:
         before:
+          - composer config --no-plugins allow-plugins.johnpbloch/wordpress-core-installer true
+          - composer config --no-plugins allow-plugins.composer/installers true
           # Install analysis dependencies.
           # https://scrutinizer-ci.com/docs/tools/php/php-scrutinizer/analyzing-wordpress
           - composer require --dev johnpbloch/wordpress
@@ -18,8 +23,7 @@ build:
         before:
           - bash bin/install-wp-tests.sh wordpress_test root '' 127.0.0.1 latest
         override:
-          - 
-            command: vendor/bin/phpunit --coverage-clover coverage-report/coverage.xml
+          - command: vendor/bin/phpunit --coverage-clover coverage-report/coverage.xml
             coverage:
               file: coverage-report/coverage.xml
               format: clover
