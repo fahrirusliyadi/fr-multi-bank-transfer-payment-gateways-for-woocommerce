@@ -3,8 +3,8 @@ Contributors: fahrirusliyadi
 Donate link: https://paypal.me/FahriRusliyadi
 Tags: multi, multiple, woocommerce, bank-transfer, bacs, payment-gateway, payment-method
 Requires at least: 4.9
-Tested up to: 5.1.1
-Stable tag: 1.1.0
+Tested up to: 6.2.2
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,9 @@ Notes:
 2. Multiple bank transfer payment gateways are displayed on the checkout page
 
 == Changelog ==
+
+= 1.1.1 =
+* Declare HPOS compatibility.
 
 = 1.1.0 =
 * Add ability to add unlimited bank transfer payment gateways.
