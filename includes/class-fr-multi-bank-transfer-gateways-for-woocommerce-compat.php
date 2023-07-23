@@ -1,5 +1,7 @@
 <?php
 /**
+ * Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Compat class.
+ *
  * @package Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce
  */
 
@@ -13,7 +15,7 @@ defined( 'ABSPATH' ) || die;
  */
 class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Compat {
 	/**
-	 * Declare HPOS compatibility. 
+	 * Declare HPOS compatibility.
 	 */
 	public function custom_order_tables() {
 		if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {

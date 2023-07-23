@@ -8,6 +8,7 @@
  */
 
 // phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+// phpcs:disable WordPress.WP.GlobalVariablesOverride.Prohibited
 // This file is not included in global scope. See fr_multi_bank_transfer_gateways_for_woocommerce_run().
 
 defined( 'ABSPATH' ) || die;
