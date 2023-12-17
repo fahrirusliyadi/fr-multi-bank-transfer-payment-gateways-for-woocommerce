@@ -20,7 +20,7 @@
  * License URI:     http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:     fr-multi-bank-transfer-gateways-for-woocommerce
  * Domain Path:     /languages
- * WC tested up to: 7.9.0
+ * WC tested up to: 8.4.0
  */
 
 // If this file is called directly, abort.

@@ -3,7 +3,7 @@ Contributors: fahrirusliyadi
 Donate link: https://paypal.me/FahriRusliyadi
 Tags: multi, multiple, woocommerce, bank-transfer, bacs, payment-gateway, payment-method
 Requires at least: 4.9
-Tested up to: 6.2.2
+Tested up to: 6.4.2
 Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
