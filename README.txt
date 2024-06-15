@@ -1,9 +1,9 @@
-=== Plugin Name ===
+=== Fr Multi Bank Transfer Payment Gateways for WooCommerce ===
 Contributors: fahrirusliyadi
 Donate link: https://paypal.me/FahriRusliyadi
-Tags: multi, multiple, woocommerce, bank-transfer, bacs, payment-gateway, payment-method
+Tags: multiple, woocommerce, bank-transfer, bacs, payment-gateway
 Requires at least: 4.9
-Tested up to: 6.4.2
+Tested up to: 6.5.4
 Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
