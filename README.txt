@@ -4,7 +4,7 @@ Donate link: https://paypal.me/FahriRusliyadi
 Tags: multiple, woocommerce, bank-transfer, bacs, payment-gateway
 Requires at least: 4.9
 Tested up to: 6.8.2
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,12 +33,16 @@ Notes:
 == Screenshots ==
 
 1. Plugin option
-2. Multiple bank transfer payment gateways are displayed on the checkout page
+1. Additional bank transfer payment gateways
+1. Multiple bank transfer payment gateways are displayed on the checkout page
 
 == Changelog ==
 
+= 1.1.3 =
+* Fix cannot edit payment gateway in WooCommerce 10.
+
 = 1.1.2 =
-* Fix compatibility with WooCommerce 10.
+* Fix missing plugin settings page in WooCommerce 10.
 
 = 1.1.1 =
 * Declare HPOS compatibility.
