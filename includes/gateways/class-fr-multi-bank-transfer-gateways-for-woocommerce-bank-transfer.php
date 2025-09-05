@@ -267,4 +267,19 @@ class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Bank_Transfer extends WC_G
 			}
 		}
 	}
+
+	/**
+	 * {@inheritdoc}
+	 *
+	 * Copied and modified from {@see WC_Gateway_BACS::get_settings_url()} version 10.1.2.
+	 * Overridden to disable reactified settings page.
+	 * 
+	 * @since 1.1.3
+	 */
+	public function get_settings_url() {
+		return Automattic\WooCommerce\Internal\Admin\Settings\Utils::wc_payments_settings_url(
+			null,
+			array( 'section' => $this->id )
+		);
+	}
 }
