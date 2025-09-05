@@ -35,7 +35,7 @@ class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Admin {
 			$action_links,
 			sprintf(
 				'<a href="%s">%s</a>',
-				admin_url( 'admin.php?page=wc-settings&tab=checkout#fr_multi_bank_transfer_gateways_for_woocommerce_bank_number' ),
+				admin_url( 'admin.php?page=wc-settings&tab=advanced&section=fr_multi_bank_transfer_gateways_for_woocommerce' ),
 				__(
 					'Settings',
 					'fr-multi-bank-transfer-gateways-for-woocommerce'
@@ -47,36 +47,47 @@ class Fr_Multi_Bank_Transfer_Gateways_For_Woocommerce_Admin {
 	}
 
 	/**
+	 * Add custom advanced sections.
+	 *
+	 * Hooked on `woocommerce_get_sections_{$this->id}` filter. The dynamic portion
+	 * `$this->id` refers to the setting page id, which is `advanced`.
+	 *
+	 * @since 1.1.2
+	 * @access private
+	 * @param array $sections Sections array.
+	 * @return array Modified sections array.
+	 */
+	public function add_custom_advanced_sections( $sections ) {
+		$sections['fr_multi_bank_transfer_gateways_for_woocommerce'] = __( 'Bank Transfer Payment Gateways', 'fr-multi-bank-transfer-gateways-for-woocommerce' );
+		return $sections;
+	}
+
+	/**
 	 * Add custom checkout settings.
 	 *
 	 * Hooked on `woocommerce_get_settings_{$this->id}` filter. The dynamic portion
-	 * `$this->id` refers to the setting page id, which is `checkout`.
+	 * `$this->id` refers to the setting page id, which is `advanced`.
 	 *
 	 * @since 1.0.0
 	 * @access private
-	 * @param array $settings Settings array.
+	 * @param array  $settings Settings array.
+	 * @param string $section_id Section id.
 	 */
-	public function add_custom_checkout_settings( $settings ) {
-		$new_settings = array();
-
-		foreach ( $settings as $value ) {
-			$new_settings[] = $value;
-
-			if ( array_key_exists( 'type', $value ) && 'payment_gateways' === $value['type'] ) {
-				$new_settings[] = array(
-					'title'             => __( 'Number of additional bank transfer gateways', 'fr-multi-bank-transfer-gateways-for-woocommerce' ),
-					'desc'              => __( 'How many bank transfer gateways do you want to add?', 'fr-multi-bank-transfer-gateways-for-woocommerce' ),
-					'id'                => 'fr_multi_bank_transfer_gateways_for_woocommerce_bank_number',
-					'type'              => 'number',
-					'desc_tip'          => true,
-					'custom_attributes' => array(
-						'min' => 0,
-					),
-				);
-			}
+	public function add_custom_advanced_settings( $settings, $section_id ) {
+		if ( 'fr_multi_bank_transfer_gateways_for_woocommerce' === $section_id ) {
+			$settings[] = array(
+				'title'             => __( 'Number of additional bank transfer gateways', 'fr-multi-bank-transfer-gateways-for-woocommerce' ),
+				'desc'              => __( 'How many bank transfer gateways do you want to add?', 'fr-multi-bank-transfer-gateways-for-woocommerce' ),
+				'id'                => 'fr_multi_bank_transfer_gateways_for_woocommerce_bank_number',
+				'type'              => 'number',
+				'desc_tip'          => true,
+				'custom_attributes' => array(
+					'min' => 0,
+				),
+			);
 		}
 
-		return $new_settings;
+		return $settings;
 	}
 
 	/**

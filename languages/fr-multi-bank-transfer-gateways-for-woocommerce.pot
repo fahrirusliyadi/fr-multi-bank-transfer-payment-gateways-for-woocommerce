@@ -1,17 +1,17 @@
-# Copyright (C) 2019 Fahri Rusliyadi
-# This file is distributed under the same license as the Fr Multi Bank Transfer Payment Gateways for WooCommerce plugin.
+# Copyright (C) 2025 Fahri Rusliyadi
+# This file is distributed under the GPL-2.0+.
 msgid ""
 msgstr ""
-"Project-Id-Version: Fr Multi Bank Transfer Payment Gateways for WooCommerce 1.0.2\n"
+"Project-Id-Version: Fr Multi Bank Transfer Payment Gateways for WooCommerce 1.1.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/fr-multi-bank-transfer-payment-gateways-for-woocommerce\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-05-05T02:48:00+00:00\n"
+"POT-Creation-Date: 2025-09-05T10:31:05+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.2.0\n"
+"X-Generator: WP-CLI 2.8.1\n"
 "X-Domain: fr-multi-bank-transfer-gateways-for-woocommerce\n"
 
 #. Plugin Name of the plugin
@@ -38,27 +38,25 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: admin/class-fr-multi-bank-transfer-gateways-for-woocommerce-admin.php:67
-#: tests/admin/test-admin.php:42
+#: admin/class-fr-multi-bank-transfer-gateways-for-woocommerce-admin.php:61
+msgid "Bank Transfer Payment Gateways"
+msgstr ""
+
+#: admin/class-fr-multi-bank-transfer-gateways-for-woocommerce-admin.php:79
 msgid "Number of additional bank transfer gateways"
 msgstr ""
 
-#: admin/class-fr-multi-bank-transfer-gateways-for-woocommerce-admin.php:68
-#: tests/admin/test-admin.php:43
+#: admin/class-fr-multi-bank-transfer-gateways-for-woocommerce-admin.php:80
 msgid "How many bank transfer gateways do you want to add?"
 msgstr ""
 
 #. translators: %d: bank transfer number
-#: admin/class-fr-multi-bank-transfer-gateways-for-woocommerce-admin.php:104
+#: admin/class-fr-multi-bank-transfer-gateways-for-woocommerce-admin.php:115
 msgid "Bank Transfer %d"
 msgstr ""
 
 #: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-1.php:29
 msgid "Bank Transfer 1"
-msgstr ""
-
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-10.php:29
-msgid "Bank Transfer 10"
 msgstr ""
 
 #: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-2.php:29
@@ -93,39 +91,42 @@ msgstr ""
 msgid "Bank Transfer 9"
 msgstr ""
 
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:44
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer-10.php:29
+msgid "Bank Transfer 10"
+msgstr ""
+
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:60
 msgid "Direct bank transfer"
 msgstr ""
 
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:45
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:61
 msgid "Take payments in person via BACS. More commonly known as direct bank/wire transfer."
 msgstr ""
 
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:80
-#: tests/gateways/test-bank-transfer.php:58
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:96
 msgid "Enable"
 msgstr ""
 
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:193
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:210
 msgid "Sort code"
 msgstr ""
 
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:215
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:232
 msgid "Bank"
 msgstr ""
 
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:219
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:236
 msgid "Account number"
 msgstr ""
 
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:227
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:244
 msgid "IBAN"
 msgstr ""
 
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:231
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:248
 msgid "BIC"
 msgstr ""
 
-#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:249
+#: includes/gateways/class-fr-multi-bank-transfer-gateways-for-woocommerce-bank-transfer.php:266
 msgid "Our bank details"
 msgstr ""
